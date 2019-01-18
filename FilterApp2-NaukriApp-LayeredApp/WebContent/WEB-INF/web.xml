@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>NaukriApp-HttpsessionWithcookies-LayeredApp</display-name>
+  <welcome-file-list>
+    <welcome-file>form.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <!-- <listener>
+     <listener-class>com.nt.listeners.SessionDurationAnalyzer</listener-class>
+  </listener>
+   -->
+  
+  <filter>
+    <filter-name>reqCounter</filter-name>
+    <filter-class>com.nt.filter.RequestCounterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+     <filter-name>reqCounter</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>checkBrowser</filter-name>
+    <filter-class>com.nt.filter.CheckBrowserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+     <filter-name>checkBrowser</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

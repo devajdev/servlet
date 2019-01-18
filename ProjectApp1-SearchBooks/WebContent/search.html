@@ -1,0 +1,43 @@
+
+<h1 style="color:red;text-align:center">BooksSearch MiniProject </h1>
+<script language="JavaScript">
+    function isExcel(){
+      //set value to hidden box
+      frm.source.value="excel";
+      validate();
+    }
+    
+     function isHtml(){
+      //set value to hidden box
+      frm.source.value="html";
+      validate();
+    }
+    function validate(){
+         if(frm.category.selectedIndex==0){
+         alert("U must select category");
+         frm.category.focus();
+         return false;
+         }
+         else{
+            //sumit the request
+            frm.submit();
+            return true;
+         }
+    
+    }
+
+</script>
+<form name="frm" action="controller"  method="POST">
+    <b>slect Book category :: </b> <select name="category">
+                                                                  <option value="" selected>---select a value---</option>
+                                                                  <option value="java">JAVA</option>
+                                                                  <option value=".net">.NET</option>
+                                                                  <option value="oracle">Oracle</option>
+                                                                  <option value="sap">SAP</option>
+                                                             </select> <br><br>
+    <input type="button" value="Excel Output" onClick="isExcel()">    
+   <input type="button" value="Html Output" onClick="isHtml()"> <br>
+   <input type="hidden" name="source">                                                             
+
+</form>
+

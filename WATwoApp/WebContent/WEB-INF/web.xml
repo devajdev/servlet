@@ -1,0 +1,13 @@
+
+<web-app>
+  <display-name>WATwoApp</display-name>
+   <servlet>
+     <servlet-name>second</servlet-name>
+     <servlet-class>com.nt.servlet.SecondServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>second</servlet-name>
+      <url-pattern>/secondurl</url-pattern>
+   </servlet-mapping>
+  
+</web-app>

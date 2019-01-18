@@ -1,0 +1,1 @@
+SQL> create table INCOMETAX(name varchar2(15),fname varchar2(15),age number(3),income number(10),tax number(10));

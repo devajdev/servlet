@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>SecurityApp1-BASIC-DIGEST</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>securityTest</web-resource-name>
+      <url-pattern>/balurl</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>manager</role-name>
+      <role-name>clerk</role-name>
+      <role-name>customer</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+  <auth-method>BASIC</auth-method>
+    <!-- <auth-method>DIGEST</auth-method> -->
+    <realm-name>myrealm</realm-name>
+  </login-config>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/pages/403.jsp</location>
+  </error-page>
+</web-app>

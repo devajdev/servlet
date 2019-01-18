@@ -1,0 +1,18 @@
+
+
+<h1 style="color:red;text-align:center">Html to Servlet Communication</h1>
+<script language="JavaScript"  src="Validation.js">
+    
+</script>
+<noscript>
+    <b>Please enable java script using browser settings</b>
+</noscript>
+
+ <form action="marriageurl"  method="GET" onsubmit="return validate(this)">
+     Person name :: <input type="text" name="pname"> <span style="color:red" id="pnameErr"> </span> <br>
+     Person age :: <input type="text" name="page"><span style="color:red" id="pageErr"> </span> <br>
+     Gender ::  <input type="radio"  name="gen"  value="M">Male &nbsp;&nbsp;
+                        <input type="radio"  name="gen"  value="F" checked>FeMale  <br>
+               <input type="hidden" name="vflag"  value="no"/>         
+     <input type="submit"  value="checkMarriageElgibility"> <br>
+ </form>

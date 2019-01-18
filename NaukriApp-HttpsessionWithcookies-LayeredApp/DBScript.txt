@@ -1,0 +1,9 @@
+SQL> create table naukri_info(name varchar2(15),
+                                                          age number(5),
+                                                           address varchar2(15),
+                                                           skill varchar2(10),
+                                                           exp number(2),
+                                                           ctc number(8),
+                                                           location varchar2(20));
+                                                           
+SQL> create sequence REGNO_SEQ  start with 1 increment by 1;                                                           
